@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Global News</string>
+    <string name="app_database_name">localities_app.db</string>
+    <string name="bookmark_news">Bookmark News</string>
+    <string name="search">Search</string>
+    <string name="popular_news">Popular News</string>
+    <string name="top_news">Top News</string>
+</resources>

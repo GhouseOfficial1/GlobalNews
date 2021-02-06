@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_top_news"
+        style="@style/TextAppearance.AppCompat.SearchResult.Title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dp_16"
+        android:text="@string/top_news"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/view_top_news"
+        android:layout_width="@dimen/dp_30"
+        android:layout_height="@dimen/dp_3"
+        android:layout_marginTop="@dimen/dp_5"
+        android:background="@color/purple_app"
+        app:layout_constraintStart_toStartOf="@id/tv_top_news"
+        app:layout_constraintTop_toBottomOf="@id/tv_top_news" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_poster_article"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dp_200"
+        android:layout_margin="@dimen/dp_16"
+        android:layout_marginHorizontal="@dimen/dp_16"
+        android:scaleType="centerCrop"
+        app:layout_constraintDimensionRatio="16:9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view_top_news"
+        tools:src="@drawable/bg_source_grey" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_title_article"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_5"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_16"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_poster_article"
+        tools:text="Commitment towards busi.." />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_desc_article"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_5"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:textColor="@color/color_text_description"
+        app:layout_constraintEnd_toEndOf="@id/tv_title_article"
+        app:layout_constraintStart_toStartOf="@+id/tv_title_article"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title_article"
+        tools:text="The current COVID-19 crisis has presented enterprises across the …" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_source_article"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_16"
+        android:background="@drawable/bg_source_grey"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:paddingHorizontal="@dimen/dp_24"
+        android:paddingVertical="@dimen/dp_5"
+        android:textColor="@color/color_text_description"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_desc_article"
+        tools:text="NDTV" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_bookmark_article"
+        android:layout_width="@dimen/dp_24"
+        android:layout_height="@dimen/dp_24"
+        android:layout_marginEnd="@dimen/dp_16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_source_article"
+        app:srcCompat="@drawable/ic_bookmark_article" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

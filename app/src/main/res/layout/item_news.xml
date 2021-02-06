@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_poster_article"
+        android:layout_width="@dimen/dp_100"
+        android:layout_height="@dimen/dp_100"
+        android:layout_margin="@dimen/dp_16"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/bg_source_grey" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_title_article"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_5"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_16"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/iv_poster_article"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Commitment towards busi.." />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_desc_article"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_5"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:textColor="@color/color_text_description"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/iv_poster_article"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title_article"
+        tools:text="The current COVID-19 crisis has presented enterprises across the …" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_source_article"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_16"
+        android:background="@drawable/bg_source_grey"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:paddingHorizontal="@dimen/dp_24"
+        android:paddingVertical="@dimen/dp_5"
+        android:textColor="@color/color_text_description"
+        app:layout_constraintStart_toEndOf="@+id/iv_poster_article"
+        app:layout_constraintTop_toBottomOf="@+id/tv_desc_article"
+        tools:text="NDTV" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_bookmark_article"
+        android:layout_width="@dimen/dp_24"
+        android:layout_height="@dimen/dp_24"
+        android:layout_marginEnd="@dimen/dp_16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_source_article"
+        app:srcCompat="@drawable/ic_bookmark_article" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier_bottom_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="iv_bookmark_article,iv_poster_article,tv_source_article" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_margin="@dimen/dp_16"
+        android:background="@color/grey_app"
+        app:layout_constraintTop_toBottomOf="@id/barrier_bottom_view" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
